@@ -1,0 +1,22 @@
+{
+    "name": "crcms/form",
+    "description": "crcms form",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/crcms/form",
+    "authors": [
+        {
+            "name": "simon",
+            "email": "28737164@qq.com",
+            "homepage": "http://crcms.cn"
+        }
+    ],
+    "require": {
+        "php":">=7.0"
+    },
+    "autoload":{
+        "psr-4": {
+            "CrCms\\Form\\": "src/"
+        }
+    }
+}
