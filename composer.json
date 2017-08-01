@@ -1,7 +1,6 @@
 {
     "name": "crcms/form",
     "description": "crcms form",
-    "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/crcms/form",
     "authors": [
