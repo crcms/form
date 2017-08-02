@@ -17,7 +17,9 @@ class Select extends AbstractElement
      */
     protected $multiple = false;
 
-    protected $optionTip = '';
+    protected $optionTip = '请选择数据';
+
+    protected $optionTipValue = '';
 
     /**
      * @return string
@@ -27,11 +29,22 @@ class Select extends AbstractElement
         return 'select';
     }
 
+    public function optionTipValue(string $value)
+    {
+        $this->optionTipValue = $value;
+        return $this;
+    }
+
 
     public function optionTip(string $tip) : self
     {
         $this->optionTip = $tip;
         return $this;
+    }
+
+    public function getOptionTipValue(): string
+    {
+        return $this->optionTipValue;
     }
 
     public function getOptionTip() : string
@@ -73,6 +86,6 @@ class Select extends AbstractElement
      */
     protected function call() : array
     {
-        return array_merge($this->call,['options','multiple','optionTip']);
+        return array_merge($this->call,['options','multiple','optionTip','optionTipValue']);
     }
 }

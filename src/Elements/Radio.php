@@ -11,10 +11,6 @@ use CrCms\Form\Elements\Traits\OptionTrait;
 class Radio extends AbstractElement
 {
     use OptionTrait;
-    /**
-     * @var array
-     */
-    protected $options = [];
 
     /**
      * @return string

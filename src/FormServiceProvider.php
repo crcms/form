@@ -34,6 +34,7 @@ class FormServiceProvider extends ServiceProvider
         //move config path
         $this->publishes([
             $this->packagePath.'config' => config_path(),
+            $this->packagePath.'views' => resource_path('views/vendor/form'),
         ]);
 
         $this->loadViewsFrom($this->packagePath.'views', $this->namespaceName);

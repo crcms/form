@@ -26,7 +26,9 @@ trait OptionTrait
         }
 
         array_walk($options,function(&$value,$key){
-            $value = ['key'=>$key,'value'=>$value];
+            if (!is_array($value)) {
+                $value = ['key'=>$key,'value'=>$value];
+            }
         });
 
         $this->options = $options;

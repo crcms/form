@@ -16,11 +16,11 @@
 @extends('form::bootstrap.layout')
 
 @section('element')
-    <div>
-        @foreach($options as $key=>$op)
-            <label class="checkbox-inline">
-                <input @include('form::bootstrap.includes.attribute',['attributes'=>$attributes,'option'=>['key'=>$key,'value'=>$op]]) type="checkbox" name="{{$name}}[{{$key ?? null}}]" value="{{$key}}" {{empty($value) ? null : in_array($key,(array)$value) ? 'checked' : null}}> {{$op}}
-            </label>
-        @endforeach
-    </div>
+<div>
+    @foreach($options as $key=>$op)
+    <label class="checkbox-inline">
+        <input @include('form::bootstrap.includes.attribute',['attributes'=>$attributes,'option'=>['key'=>$key,'value'=>$op]]) type="checkbox" name="{{$name}}[{{$key ?? null}}]" value="{{$key}}" {{empty($value) ? null : in_array($key,(array)$value) ? 'checked' : null}}> {{$op}}
+    </label>
+    @endforeach
+</div>
 @endsection
