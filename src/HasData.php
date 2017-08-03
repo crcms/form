@@ -2,7 +2,6 @@
 
 namespace CrCms\Form;
 
-use Dingo\Api\Exception\ValidationHttpException;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
 
